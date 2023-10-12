@@ -79,12 +79,17 @@ WSGI_APPLICATION = 'expenseswebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-    }
+        'NAME': 'expenses',
+        'USER': 'postgres',
+        'PASSWORD': 'K1pd3k21',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'OPTIONS': {
+            'client': 'pgcli',  # Use pgcli as the PostgreSQL client
+        },
+    },
 }
+  
 
 
 # Password validation
